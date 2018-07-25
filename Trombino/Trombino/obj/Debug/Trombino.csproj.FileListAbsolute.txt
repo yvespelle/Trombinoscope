@@ -1,0 +1,11 @@
+c:\users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Trombino.exe.config
+c:\users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Trombino.exe
+c:\users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Trombino.pdb
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.csprojAssemblyReference.cache
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.Form1.resources
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.Properties.Resources.resources
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.csproj.GenerateResource.cache
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.csproj.CoreCompileInputs.cache
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.exe
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.pdb
+C:\Users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.popup.resources
