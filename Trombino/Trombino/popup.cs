@@ -28,7 +28,7 @@ namespace Trombino
 
         private void button1_Click(object sender, EventArgs e)
         {
-            popup.ActiveForm.Hide();
+            popup.ActiveForm.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

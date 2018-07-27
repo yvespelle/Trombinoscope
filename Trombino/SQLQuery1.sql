@@ -29,13 +29,13 @@ CREATE TABLE IDENTIFIANTS
 
 DECLARE @img AS VARBINARY(MAX)
 
-SELECT @img = CAST(bulkcolumn AS VARBINARY(MAX)) FROM OPENROWSET(BULK 'C:\Users\ypelle\Desktop\phototheque\Anne BITZ.jpg', SINGLE_BLOB) AS x
+SELECT @img = CAST(bulkcolumn AS VARBINARY(MAX)) FROM OPENROWSET(BULK 'C:\Users\ypelle\Desktop\photothèque\Anne BITZ.jpg', SINGLE_BLOB) AS x
 INSERT INTO IDENTIFIANTS (PRENOM,NOM,DEPARTEMENT,MAIL,TELEPHONE,CLIENTS,COLLABORATEURS,PHOTO)  VALUES ('Anne', 'BITZ','LJM','abitz@solutec.fr', '0615098248', 'Enedis, Casino (St-Etienne)', 'supervise Nicolas H et Hugo L',@img);
 
-SELECT @img = CAST(bulkcolumn AS VARBINARY(MAX)) FROM OPENROWSET(BULK 'C:\Users\ypelle\Desktop\phototheque\Arthur RAYNAL.jpg', SINGLE_BLOB) AS x
+SELECT @img = CAST(bulkcolumn AS VARBINARY(MAX)) FROM OPENROWSET(BULK 'C:\Users\ypelle\Desktop\photothèque\Arthur RAYNAL.jpg', SINGLE_BLOB) AS x
 INSERT INTO IDENTIFIANTS(PRENOM,NOM,DEPARTEMENT,MAIL,TELEPHONE,CLIENTS,COLLABORATEURS,PHOTO)  VALUES ('Arthur', 'RAYNAL','LBT','araynal@solutec.fr', '0784258645', 'Volvo', 'travaille avec Roxanne DM',@img);
 
-SELECT @img = CAST(bulkcolumn AS VARBINARY(MAX)) FROM OPENROWSET(BULK 'C:\Users\ypelle\Desktop\phototheque\Aymeric MABILLE DU CHENE.jpg', SINGLE_BLOB) AS x
+SELECT @img = CAST(bulkcolumn AS VARBINARY(MAX)) FROM OPENROWSET(BULK 'C:\Users\ypelle\Desktop\photothèque\Aymeric MABILLE DU CHENE.jpg', SINGLE_BLOB) AS x
 INSERT INTO IDENTIFIANTS(PRENOM,NOM,DEPARTEMENT,MAIL,TELEPHONE,CLIENTS,COLLABORATEURS,PHOTO)  VALUES ('Aymeric', 'MABILLE DU CHÊNE','LLD','amabilleduchene@solutec.fr', '0779490595', 'XPO (Beausamblant et St-Quentin-Fallavier), Sanofi (Gerland et Neuville sur Saône)', 'travaille avec Marine V', @img);
 
 SELECT @img = CAST(bulkcolumn AS VARBINARY(MAX)) FROM OPENROWSET(BULK 'C:\Users\ypelle\Desktop\phototheque\Basile BERTRAND.jpg', SINGLE_BLOB) AS x

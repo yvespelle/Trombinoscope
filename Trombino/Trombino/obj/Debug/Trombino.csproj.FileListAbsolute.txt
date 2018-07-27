@@ -9,3 +9,5 @@ c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.csproj.CoreCom
 c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.exe
 c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.pdb
 C:\Users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.popup.resources
+C:\Users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Database1.mdf
+C:\Users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Database1_log.ldf

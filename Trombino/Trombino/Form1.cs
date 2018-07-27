@@ -26,7 +26,14 @@ namespace Trombino
             panel2.BackColor = Color.FromArgb(192, 0, 0);
             // rouge Color.FromArgb(192,0,0)
             // gris Color.FromArgb(216,216,216)
-
+            comboBox1.DisplayMember = "Text";
+            comboBox1.ValueMember = "Value";
+            comboBox1.Items.Add(new { Text = "Service RH", Value = "RH" });
+            comboBox1.Items.Add(new { Text = "Département LLD", Value = "LLD" });
+            comboBox1.Items.Add(new { Text = "Département LJM", Value = "LJM" });
+            comboBox1.Items.Add(new { Text = "Département LBT", Value = "LBT" });
+            comboBox1.Items.Add(new { Text = "Département EOP", Value = "EOP" });
+            comboBox1.Items.Add(new { Text = "Tous", Value = "Tous" });
 
 
         }
@@ -60,6 +67,7 @@ namespace Trombino
         private void button1_Click(object sender, EventArgs e)
         {
             AfficherLesImages();
+            AfficherTousNoms();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -86,6 +94,7 @@ namespace Trombino
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             AfficherDetails(2);
+            //label2.Text = "photo appelée 2";
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -363,7 +372,7 @@ namespace Trombino
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
 
         }
     }
