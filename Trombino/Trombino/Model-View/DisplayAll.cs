@@ -26,7 +26,6 @@ namespace Trombino
 
         private void AfficherLesImages()
         {
-
             // connexion à la base
             string connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connetionString);
@@ -51,7 +50,6 @@ namespace Trombino
                 }
 
                 cmd.Connection.Open();
-
 
                 ConstructionBox();
                 ViderBox();

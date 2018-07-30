@@ -135,7 +135,6 @@ namespace Trombino
 
                 }
             }
-
             dataReader.Close();
             cnn.Close();
 
@@ -177,5 +176,126 @@ namespace Trombino
 
 
         }
+
+        // -----------------------------------------------------------------------------------------------------------------------------------------------
+        // ------------------------------------- Methode afficher le contact par recherche de nom --------------------------------------------------------
+        // -----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        private void AfficherProfilRecherche()
+        {
+            string connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(connetionString);
+            List<ImageList> list = new List<ImageList>();
+            SqlCommand cmd;
+            //string val = comboBox1.Items.
+            try
+            {
+                if (textBox1.Text != "")
+                {
+                    string dept = textBox1.Text; // récupère la valeur correspondante au texte entré dans la combobox
+                    string query = String.Format(@"SELECT PHOTO FROM IDENTIFIANTS WHERE NOM= @dept OR PRENOM=@dept"); // on ne recupère que l'image
+                    cmd = new SqlCommand(query, sqlConn);
+                    cmd.Parameters.AddWithValue("@dept", dept);
+
+                    cmd.Connection.Open();
+
+                    ConstructionBox();
+                    ViderBox();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    j = 1;
+                    while (reader.Read())
+                    {
+
+                        ImageList _image = new ImageList();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            byte[] data = (byte[])reader[i];
+                            MemoryStream ms = new MemoryStream(data);
+                            Image image = new Bitmap(ms); // on converti en Bitmap pour récupérer une image
+                            box[j].Image = image; // affichage de l'image dans la PictureBox
+                            list.Add(_image);
+                            j++;
+                        }
+                    }
+
+                    reader.Close();
+                    sqlConn.Close();
+
+                    if (list.Count == 0)
+                    {
+                        label41.ForeColor = Color.FromArgb(192, 0, 0);
+                        label41.Text = "Il n'y a pas de contact correspondante à votre recherche.";
+                    }
+                }
+                else
+                {
+                    label41.ForeColor = Color.FromArgb(192, 0, 0);
+                    label41.Text = "Merci de renseigner un Nom ou un Prénom."; // label au dessus de la barre de recherche par nom/prenom
+                }
+            }
+            catch (Exception)
+            {
+                labelTextChoix.ForeColor = Color.FromArgb(192, 0, 0);
+                labelTextChoix.Text = "echec de connexion";
+            }
+        }
+
+
+
+
+        private void AfficherNomRecherche()
+        {
+            // connexion à la base
+            string connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(connetionString);
+            SqlCommand cmd;
+            //string val = comboBox1.Items.
+            try
+            {
+                string dept = textBox1.Text; // récupère la valeur correspondante au texte entré dans la combobox
+                string query = String.Format(@"SELECT NOM, PRENOM FROM IDENTIFIANTS WHERE NOM= @dept OR PRENOM=@dept"); // on ne recupère que l'image
+                cmd = new SqlCommand(query, sqlConn);
+                cmd.Parameters.AddWithValue("@dept", dept);
+
+                cmd.Connection.Open();
+
+                ConstructionTextBoxListe();
+                ViderlabelListe();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                j = 1;
+                while (reader.Read())
+                {
+
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        string[] tab = new string[reader.FieldCount];
+                        tab[i] = reader.GetValue(i).ToString(); //récupération du résultat dans un tableau avant de le retourner
+                        labelListe[j].Text = labelListe[j].Text + tab[i] + Environment.NewLine;
+                        labelListe[j].TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                        labelListe[j].Visible = true;
+                    }
+                    j++;
+                }
+
+                reader.Close();
+                sqlConn.Close();
+
+            }
+            catch (Exception)
+            {
+                labelTextChoix.Text = "echec de connexion";
+            }
+
+        }
+
     }
+
+
+
+
+
 }
+

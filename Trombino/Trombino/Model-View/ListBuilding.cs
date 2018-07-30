@@ -93,11 +93,7 @@ namespace Trombino
             box[38] = pictureBox38;
             box[39] = pictureBox39;
             box[40] = pictureBox40;
-            box[41] = pictureBox41;
-            box[42] = pictureBox42;
-            box[43] = pictureBox43;
-            box[44] = pictureBox44;
-            box[45] = pictureBox45;
+         
         }
 
 

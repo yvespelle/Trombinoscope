@@ -20,10 +20,11 @@ namespace Trombino
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(216, 216, 216);
-            panel1.BackColor = Color.FromArgb(128, 128, 128);
-            panel2.BackColor = Color.FromArgb(192, 0, 0);
-            // rouge Color.FromArgb(192,0,0)
-            // gris Color.FromArgb(216,216,216)
+
+            // couleurs du bandeau des pages
+            panel1.BackColor = Color.FromArgb(128, 128, 128); //gris
+            panel2.BackColor = Color.FromArgb(192, 0, 0); // Rouge
+
             comboBox1.DisplayMember = "Text";
             comboBox1.ValueMember = "Value";
             comboBox1.Items.Add(new { Text = "Service RH", Value = "RH" });
@@ -32,6 +33,8 @@ namespace Trombino
             comboBox1.Items.Add(new { Text = "Département LBT", Value = "LBT" });
             comboBox1.Items.Add(new { Text = "Département EOP", Value = "EOP" });
             comboBox1.Items.Add(new { Text = "Tous", Value = "Tous" });
+
+
 
 
         }
@@ -372,6 +375,12 @@ namespace Trombino
         {
 
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AfficherProfilRecherche();
+            AfficherNomRecherche();
         }
     }
 }
