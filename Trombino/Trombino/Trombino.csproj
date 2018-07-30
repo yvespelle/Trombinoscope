@@ -61,28 +61,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carre.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Model-View\DisplayAll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Model-View\DisplayDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model-View\ListBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Methodes.cs">
+    <Compile Include="Model-View\Methodes.cs" />
+    <Compile Include="view\popup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="popup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="popup.Designer.cs">
+    <Compile Include="view\popup.Designer.cs">
       <DependentUpon>popup.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="view\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="popup.resx">
+    <EmbeddedResource Include="view\popup.resx">
       <DependentUpon>popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -110,15 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGO.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
