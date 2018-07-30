@@ -76,7 +76,6 @@
     <Compile Include="view\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model-View\Methodes.cs" />
     <Compile Include="view\popup.cs">
       <SubType>Form</SubType>
     </Compile>

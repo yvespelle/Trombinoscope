@@ -20,15 +20,18 @@ namespace Trombino
 
         private void AfficherDetails(int p)
         {
-            popup = new popup();
-            popup.Show();
-            AfficherLeNom(p);
-            AfficherLesCoordonnees(p);
-            AfficherLesClients(p);
-            AfficherPhotoPopUp(p);
+            if (box[p].Image != null) // empeche d'avoir une erreur lorsqu'on clic sur unr photo "vide"
+            {
+                popup = new popup();
+                popup.Show();
+                AfficherLeNom(p);
+                AfficherLesCoordonnees(p);
+                AfficherLesClients(p);
+                AfficherPhotoPopUp(p);
+            }
 
         }
-        
+
 
         private void AfficherLeNom(int p)
         {
@@ -36,32 +39,31 @@ namespace Trombino
             connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True";
             SqlConnection cnn = new SqlConnection(connetionString);
 
-            if (box[p].Image != null) // empeche d'avoir une erreur lorsqu'on clic sur unr photo "vide"
+
+            byte[] code = imageToByteArray(box[p].Image);
+            cnn.Open();
+
+            SqlCommand requete = cnn.CreateCommand();
+            requete.CommandText = "SELECT NOM, PRENOM FROM IDENTIFIANTS WHERE PHOTO=@PHOTO";
+            requete.Parameters.Add(new SqlParameter("@PHOTO", code)); // récupération du parametre à afficher
+
+            SqlDataReader dataReader = requete.ExecuteReader();
+
+            while (dataReader.Read())
             {
-                byte[] code = imageToByteArray(box[p].Image);
-                cnn.Open();
 
-                SqlCommand requete = cnn.CreateCommand();
-                requete.CommandText = "SELECT NOM, PRENOM FROM IDENTIFIANTS WHERE PHOTO=@PHOTO";
-                requete.Parameters.Add(new SqlParameter("@PHOTO", code)); // récupération du parametre à afficher
-
-                SqlDataReader dataReader = requete.ExecuteReader();
-
-                while (dataReader.Read())
+                for (int i = 0; i < dataReader.FieldCount; i++)
                 {
+                    string[] tab = new string[dataReader.FieldCount];
+                    tab[i] = dataReader.GetValue(i).ToString(); //récupération du résultat dans un tableau avant de le retourner
+                    popup.textBoxPopup1.Text = popup.textBoxPopup1.Text + tab[i] + Environment.NewLine + Environment.NewLine;
 
-                    for (int i = 0; i < dataReader.FieldCount; i++)
-                    {
-                        string[] tab = new string[dataReader.FieldCount];
-                        tab[i] = dataReader.GetValue(i).ToString(); //récupération du résultat dans un tableau avant de le retourner
-                        popup.textBoxPopup1.Text = popup.textBoxPopup1.Text + tab[i] + Environment.NewLine + Environment.NewLine;
-
-                    }
                 }
-
-                dataReader.Close();
-                cnn.Close();
             }
+
+            dataReader.Close();
+            cnn.Close();
+
         }
 
 
@@ -111,33 +113,32 @@ namespace Trombino
             connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True";
             SqlConnection cnn = new SqlConnection(connetionString);
 
-            if (box[p].Image != null) // empeche d'avoir une erreur lorsqu'on clic sur unr photo "vide"
+
+            byte[] code = imageToByteArray(box[p].Image);
+            cnn.Open();
+
+            SqlCommand requete = cnn.CreateCommand();
+            requete.CommandText = "SELECT CLIENTS, COLLABORATEURS FROM IDENTIFIANTS WHERE PHOTO=@PHOTO";
+            requete.Parameters.Add(new SqlParameter("@PHOTO", code)); // récupération du parametre à afficher
+
+            SqlDataReader dataReader = requete.ExecuteReader();
+
+            while (dataReader.Read())
             {
-                byte[] code = imageToByteArray(box[p].Image);
-                cnn.Open();
 
-                SqlCommand requete = cnn.CreateCommand();
-                requete.CommandText = "SELECT CLIENTS, COLLABORATEURS FROM IDENTIFIANTS WHERE PHOTO=@PHOTO";
-                requete.Parameters.Add(new SqlParameter("@PHOTO", code)); // récupération du parametre à afficher
-
-                SqlDataReader dataReader = requete.ExecuteReader();
-
-                while (dataReader.Read())
+                for (int i = 0; i < dataReader.FieldCount; i++)
                 {
+                    string[] tab = new string[dataReader.FieldCount];
+                    tab[i] = dataReader.GetValue(i).ToString(); //récupération du résultat dans un tableau avant de le retourner
+                    popup.textBoxPopup3.Text = popup.textBoxPopup3.Text + tab[i] + Environment.NewLine + Environment.NewLine;
+                    popup.Show();
 
-                    for (int i = 0; i < dataReader.FieldCount; i++)
-                    {
-                        string[] tab = new string[dataReader.FieldCount];
-                        tab[i] = dataReader.GetValue(i).ToString(); //récupération du résultat dans un tableau avant de le retourner
-                        popup.textBoxPopup3.Text = popup.textBoxPopup3.Text + tab[i] + Environment.NewLine + Environment.NewLine;
-                        popup.Show();
-
-                    }
                 }
-
-                dataReader.Close();
-                cnn.Close();
             }
+
+            dataReader.Close();
+            cnn.Close();
+
         }
 
 
@@ -154,28 +155,26 @@ namespace Trombino
             connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True";
             SqlConnection cnn = new SqlConnection(connetionString);
 
-            if (box[p].Image != null)
-            {  // empeche d'avoir une erreur lorsqu'on clic sur unr photo "vide"
-                byte[] code = imageToByteArray(box[p].Image);
-                cnn.Open();
-                //label1.Text = "Connexion établie";
+            byte[] code = imageToByteArray(box[p].Image);
+            cnn.Open();
+            //label1.Text = "Connexion établie";
 
-                SqlCommand requete = cnn.CreateCommand();
-                requete.CommandText = "SELECT PHOTO FROM IDENTIFIANTS WHERE PHOTO=@PHOTO";
-                requete.Parameters.Add(new SqlParameter("@PHOTO", code)); // récupération du parametre à afficher
+            SqlCommand requete = cnn.CreateCommand();
+            requete.CommandText = "SELECT PHOTO FROM IDENTIFIANTS WHERE PHOTO=@PHOTO";
+            requete.Parameters.Add(new SqlParameter("@PHOTO", code)); // récupération du parametre à afficher
 
-                SqlDataReader reader = requete.ExecuteReader();
+            SqlDataReader reader = requete.ExecuteReader();
 
-                while (reader.Read())
-                {
+            while (reader.Read())
+            {
 
-                    byte[] data = (byte[])reader[i];
-                    MemoryStream ms = new MemoryStream(data);
-                    Image image = new Bitmap(ms); // on converti en Bitmap pour récupérer une image
-                    popup.pictureBox1.Image = image; // affichage de l'image dans la PictureBox
-                }
-
+                byte[] data = (byte[])reader[i];
+                MemoryStream ms = new MemoryStream(data);
+                Image image = new Bitmap(ms); // on converti en Bitmap pour récupérer une image
+                popup.pictureBox1.Image = image; // affichage de l'image dans la PictureBox
             }
+
+
 
         }
     }

@@ -83,9 +83,7 @@ namespace Trombino
             {
                 labelTextChoix.Text = "echec de connexion";
             }
-
         }
-
 
 
 
