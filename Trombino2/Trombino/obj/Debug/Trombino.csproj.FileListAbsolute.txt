@@ -1,0 +1,39 @@
+c:\users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Trombino.exe.config
+c:\users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Trombino.exe
+c:\users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Trombino.pdb
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.csprojAssemblyReference.cache
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.Form1.resources
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.Properties.Resources.resources
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.csproj.GenerateResource.cache
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.csproj.CoreCompileInputs.cache
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.exe
+c:\users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.pdb
+C:\Users\ypelle\source\repos\Trombino\Trombino\obj\Debug\Trombino.popup.resources
+C:\Users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Database1.mdf
+C:\Users\ypelle\source\repos\Trombino\Trombino\bin\Debug\Database1_log.ldf
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\bin\Debug\Database1.mdf
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\bin\Debug\Database1_log.ldf
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\bin\Debug\Trombino.exe.config
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\bin\Debug\Trombino.exe
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\bin\Debug\Trombino.pdb
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.csprojAssemblyReference.cache
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.Form1.resources
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.popup.resources
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.Properties.Resources.resources
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.csproj.GenerateResource.cache
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.csproj.CoreCompileInputs.cache
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.exe
+V:\Consultants\IC\0_Commun\4 - Projets\Trombino\Trombino\obj\Debug\Trombino.pdb
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.csprojAssemblyReference.cache
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.Form1.resources
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.popup.resources
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.Properties.Resources.resources
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.csproj.GenerateResource.cache
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.csproj.CoreCompileInputs.cache
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.exe
+C:\Users\ypelle\source\repos\Trombino2\Trombino\obj\Debug\Trombino.pdb
+C:\Users\ypelle\source\repos\Trombino2\Trombino\bin\Debug\Database1_log.ldf
+C:\Users\ypelle\source\repos\Trombino2\Trombino\bin\Debug\Database1.mdf
+C:\Users\ypelle\source\repos\Trombino2\Trombino\bin\Debug\Trombino.exe.config
+C:\Users\ypelle\source\repos\Trombino2\Trombino\bin\Debug\Trombino.exe
+C:\Users\ypelle\source\repos\Trombino2\Trombino\bin\Debug\Trombino.pdb
