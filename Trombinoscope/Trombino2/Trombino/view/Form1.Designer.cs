@@ -119,7 +119,7 @@ namespace Trombino
             this.label28 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.labelTextRechercher = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.textBoxRechercher = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -132,8 +132,14 @@ namespace Trombino
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
+            this.textBoxLBT = new System.Windows.Forms.TextBox();
+            this.textBoxLLD = new System.Windows.Forms.TextBox();
+            this.textBoxLJM = new System.Windows.Forms.TextBox();
+            this.textBoxEOP = new System.Windows.Forms.TextBox();
+            this.textBoxRH = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPhoto.SuspendLayout();
@@ -184,6 +190,7 @@ namespace Trombino
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -214,8 +221,9 @@ namespace Trombino
             // 
             // tabPhoto
             // 
+            this.tabPhoto.Controls.Add(this.panel3);
             this.tabPhoto.Controls.Add(this.labelChoixPhoto);
-            this.tabPhoto.Controls.Add(this.label43);
+            this.tabPhoto.Controls.Add(this.label41);
             this.tabPhoto.Controls.Add(this.pictureBox37);
             this.tabPhoto.Controls.Add(this.label44);
             this.tabPhoto.Controls.Add(this.pictureBox17);
@@ -240,7 +248,7 @@ namespace Trombino
             this.tabPhoto.Controls.Add(this.pictureBox34);
             this.tabPhoto.Controls.Add(this.label26);
             this.tabPhoto.Controls.Add(this.pictureBox40);
-            this.tabPhoto.Controls.Add(this.label41);
+            this.tabPhoto.Controls.Add(this.labelTextRechercher);
             this.tabPhoto.Controls.Add(this.pictureBox14);
             this.tabPhoto.Controls.Add(this.label27);
             this.tabPhoto.Controls.Add(this.pictureBox21);
@@ -341,7 +349,7 @@ namespace Trombino
             // 
             // pictureBox37
             // 
-            this.pictureBox37.Location = new System.Drawing.Point(596, 561);
+            this.pictureBox37.Location = new System.Drawing.Point(603, 561);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(79, 124);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -371,7 +379,7 @@ namespace Trombino
             // 
             // pictureBox36
             // 
-            this.pictureBox36.Location = new System.Drawing.Point(486, 561);
+            this.pictureBox36.Location = new System.Drawing.Point(497, 561);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(79, 124);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -381,7 +389,7 @@ namespace Trombino
             // 
             // pictureBox38
             // 
-            this.pictureBox38.Location = new System.Drawing.Point(702, 561);
+            this.pictureBox38.Location = new System.Drawing.Point(709, 561);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(79, 124);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -421,7 +429,7 @@ namespace Trombino
             // 
             // pictureBox39
             // 
-            this.pictureBox39.Location = new System.Drawing.Point(808, 561);
+            this.pictureBox39.Location = new System.Drawing.Point(817, 561);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(79, 124);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -461,7 +469,7 @@ namespace Trombino
             // 
             // pictureBox40
             // 
-            this.pictureBox40.Location = new System.Drawing.Point(914, 561);
+            this.pictureBox40.Location = new System.Drawing.Point(927, 561);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(79, 124);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1125,14 +1133,14 @@ namespace Trombino
             this.label27.Text = "label27";
             this.label27.Visible = false;
             // 
-            // label41
+            // labelTextRechercher
             // 
-            this.label41.Location = new System.Drawing.Point(38, 230);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(159, 66);
-            this.label41.TabIndex = 80;
-            this.label41.Text = "Saisissez le Nom ou Prénom du contact recherché";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTextRechercher.Location = new System.Drawing.Point(38, 230);
+            this.labelTextRechercher.Name = "labelTextRechercher";
+            this.labelTextRechercher.Size = new System.Drawing.Size(159, 66);
+            this.labelTextRechercher.TabIndex = 80;
+            this.labelTextRechercher.Text = "Saisissez le Nom ou Prénom du contact recherché";
+            this.labelTextRechercher.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label26
             // 
@@ -1183,7 +1191,7 @@ namespace Trombino
             // 
             // pictureBox44
             // 
-            this.pictureBox44.Location = new System.Drawing.Point(1027, 561);
+            this.pictureBox44.Location = new System.Drawing.Point(1355, 561);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(79, 124);
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1192,7 +1200,7 @@ namespace Trombino
             // 
             // pictureBox43
             // 
-            this.pictureBox43.Location = new System.Drawing.Point(1133, 561);
+            this.pictureBox43.Location = new System.Drawing.Point(1245, 561);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(79, 124);
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1201,7 +1209,7 @@ namespace Trombino
             // 
             // pictureBox42
             // 
-            this.pictureBox42.Location = new System.Drawing.Point(1239, 561);
+            this.pictureBox42.Location = new System.Drawing.Point(1139, 561);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(79, 124);
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1210,7 +1218,7 @@ namespace Trombino
             // 
             // pictureBox41
             // 
-            this.pictureBox41.Location = new System.Drawing.Point(1345, 561);
+            this.pictureBox41.Location = new System.Drawing.Point(1033, 561);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(79, 124);
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1244,14 +1252,14 @@ namespace Trombino
             this.label44.Text = "label44";
             this.label44.Visible = false;
             // 
-            // label43
+            // label41
             // 
-            this.label43.Location = new System.Drawing.Point(1016, 688);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(105, 45);
-            this.label43.TabIndex = 101;
-            this.label43.Text = "label43";
-            this.label43.Visible = false;
+            this.label41.Location = new System.Drawing.Point(1016, 688);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(105, 45);
+            this.label41.TabIndex = 101;
+            this.label41.Text = "label41";
+            this.label41.Visible = false;
             // 
             // pictureBox45
             // 
@@ -1262,6 +1270,79 @@ namespace Trombino
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox45.TabIndex = 0;
             this.pictureBox45.TabStop = false;
+            // 
+            // textBoxLBT
+            // 
+            this.textBoxLBT.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxLBT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLBT.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.textBoxLBT.Location = new System.Drawing.Point(11, 14);
+            this.textBoxLBT.Name = "textBoxLBT";
+            this.textBoxLBT.Size = new System.Drawing.Size(120, 13);
+            this.textBoxLBT.TabIndex = 102;
+            this.textBoxLBT.Text = "Département LBT";
+            this.textBoxLBT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxLLD
+            // 
+            this.textBoxLLD.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxLLD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLLD.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.textBoxLLD.Location = new System.Drawing.Point(11, 39);
+            this.textBoxLLD.Name = "textBoxLLD";
+            this.textBoxLLD.Size = new System.Drawing.Size(120, 13);
+            this.textBoxLLD.TabIndex = 103;
+            this.textBoxLLD.Text = "Département LLD";
+            this.textBoxLLD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxLJM
+            // 
+            this.textBoxLJM.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxLJM.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLJM.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.textBoxLJM.Location = new System.Drawing.Point(11, 65);
+            this.textBoxLJM.Name = "textBoxLJM";
+            this.textBoxLJM.Size = new System.Drawing.Size(120, 13);
+            this.textBoxLJM.TabIndex = 104;
+            this.textBoxLJM.Text = "Département LJM";
+            this.textBoxLJM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxEOP
+            // 
+            this.textBoxEOP.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxEOP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEOP.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.textBoxEOP.Location = new System.Drawing.Point(11, 91);
+            this.textBoxEOP.Name = "textBoxEOP";
+            this.textBoxEOP.Size = new System.Drawing.Size(120, 13);
+            this.textBoxEOP.TabIndex = 105;
+            this.textBoxEOP.Text = "Service EOP";
+            this.textBoxEOP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxRH
+            // 
+            this.textBoxRH.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxRH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxRH.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.textBoxRH.Location = new System.Drawing.Point(11, 117);
+            this.textBoxRH.Name = "textBoxRH";
+            this.textBoxRH.Size = new System.Drawing.Size(120, 13);
+            this.textBoxRH.TabIndex = 106;
+            this.textBoxRH.Text = "Service Recrutement";
+            this.textBoxRH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.textBoxRH);
+            this.panel3.Controls.Add(this.textBoxEOP);
+            this.panel3.Controls.Add(this.textBoxLJM);
+            this.panel3.Controls.Add(this.textBoxLLD);
+            this.panel3.Controls.Add(this.textBoxLBT);
+            this.panel3.Location = new System.Drawing.Point(30, 502);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(145, 146);
+            this.panel3.TabIndex = 107;
             // 
             // Form1
             // 
@@ -1325,6 +1406,8 @@ namespace Trombino
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1337,7 +1420,7 @@ namespace Trombino
         private TabPage tabPhoto;
         private TabPage tabPlan;
         private Label labelTextChoix;
-        private Label label43;
+        private Label label41;
         private PictureBox pictureBox37;
         private Label label44;
         private PictureBox pictureBox17;
@@ -1363,7 +1446,7 @@ namespace Trombino
         private PictureBox pictureBox34;
         private Label label26;
         private PictureBox pictureBox40;
-        private Label label41;
+        private Label labelTextRechercher;
         private PictureBox pictureBox14;
         private Label label27;
         private PictureBox pictureBox21;
@@ -1433,6 +1516,12 @@ namespace Trombino
         private PictureBox pictureBox5;
         private Label label12;
         private PictureBox pictureBox45;
+        private TextBox textBoxLBT;
+        private TextBox textBoxRH;
+        private TextBox textBoxEOP;
+        private TextBox textBoxLJM;
+        private TextBox textBoxLLD;
+        private Panel panel3;
     }
 }
 

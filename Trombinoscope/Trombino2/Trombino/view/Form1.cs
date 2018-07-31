@@ -30,6 +30,19 @@ namespace Trombino
 
             labelChoixPhoto.ForeColor = Color.FromArgb(192, 0, 0); ;
 
+            textBoxLBT.ForeColor = Color.FromArgb(192, 25, 50);
+            textBoxLLD.ForeColor = Color.FromArgb(64, 130, 99);
+            textBoxLJM.ForeColor = Color.FromArgb(215, 107, 0);
+            textBoxEOP.ForeColor = Color.FromArgb(0, 128, 192);
+            textBoxRH.ForeColor = Color.FromArgb(132, 0, 132);
+
+            textBoxLBT.BackColor = Color.FromArgb(216, 216, 216);
+            textBoxLLD.BackColor = Color.FromArgb(216, 216, 216);
+            textBoxLJM.BackColor = Color.FromArgb(216, 216, 216);
+            textBoxEOP.BackColor = Color.FromArgb(216, 216, 216);
+            textBoxRH.BackColor = Color.FromArgb(216, 216, 216);
+
+
 
             comboBox1.DisplayMember = "Text";
             comboBox1.ValueMember = "Value";
